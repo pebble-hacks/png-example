@@ -1,0 +1,27 @@
+{
+  "uuid": "dd9a7bfa-7d6b-4236-ba81-9a2eeefc3186",
+  "shortName": "PNG Example",
+  "longName": "PNG Example",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "targetPlatforms": [
+    "basalt"
+  ],
+  "sdkVersion": "3",
+  "resources": {
+    "media": [
+      {
+        "type":"raw",
+        "name":"DOG",
+        "file":"images/dog.png"
+      }
+    ]
+  }
+}
