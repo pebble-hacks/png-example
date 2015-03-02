@@ -8,7 +8,7 @@ static void main_window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
-  s_bitmap = gbitmap_create_with_resource(RESOURCE_ID_DOG);
+  s_bitmap = gbitmap_create_with_resource(RESOURCE_ID_GLOBE);
 
   s_bitmap_layer = bitmap_layer_create(bounds);
   bitmap_layer_set_bitmap(s_bitmap_layer, s_bitmap);
@@ -24,7 +24,7 @@ static void main_window_unload(Window *window) {
 static void init() {
   s_main_window = window_create();
   window_set_fullscreen(s_main_window, true);
-  window_set_background_color(s_main_window, GColorRed);
+  window_set_background_color(s_main_window, GColorBlue);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = main_window_load,
     .unload = main_window_unload,

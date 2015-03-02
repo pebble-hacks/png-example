@@ -19,8 +19,8 @@
     "media": [
       {
         "type":"raw",
-        "name":"DOG",
-        "file":"images/dog.png"
+        "name":"GLOBE",
+        "file":"images/globe.png"
       }
     ]
   }
