@@ -12,7 +12,11 @@ static void main_window_load(Window *window) {
 
   s_bitmap_layer = bitmap_layer_create(bounds);
   bitmap_layer_set_bitmap(s_bitmap_layer, s_bitmap);
+#ifdef PBL_PLATFORM_APLITE
+  bitmap_layer_set_compositing_mode(s_bitmap_layer, GCompOpAssign);
+#elif PBL_PLATFORM_BASALT
   bitmap_layer_set_compositing_mode(s_bitmap_layer, GCompOpSet);
+#endif
   layer_add_child(window_layer, bitmap_layer_get_layer(s_bitmap_layer));
 }
 
@@ -23,8 +27,10 @@ static void main_window_unload(Window *window) {
 
 static void init() {
   s_main_window = window_create();
+#ifdef PBL_SDK_2
   window_set_fullscreen(s_main_window, true);
-  window_set_background_color(s_main_window, GColorBlue);
+#endif
+  window_set_background_color(s_main_window, COLOR_FALLBACK(GColorBlue, GColorBlack));
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = main_window_load,
     .unload = main_window_unload,

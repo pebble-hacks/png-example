@@ -12,13 +12,13 @@
     "dummy": 0
   },
   "targetPlatforms": [
-    "basalt"
+    "aplite", "basalt"
   ],
   "sdkVersion": "3",
   "resources": {
     "media": [
       {
-        "type":"raw",
+        "type":"png",
         "name":"GLOBE",
         "file":"images/globe.png"
       }
